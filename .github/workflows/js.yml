@@ -17,5 +17,5 @@ jobs:
     - name: Rollup
       run: |
         yarn
-        rollup -c
-        rollup -c rollup.esm.js
+        yarn run rollup -c
+        yarn run rollup -c rollup.esm.js
