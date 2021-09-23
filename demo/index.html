@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<head>
+    <script type="module" src="../index.dist.js"></script>
+    <style>
+        body { --color1: #EF6A52; }
+    </style>
+</head>
+<body class="font-sans">
+<header class="text-gray-600">
+    <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+        <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-10 h-10 text-white p-2 bg-indigo-500 rounded-full" viewBox="0 0 24 24">
+                <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+            </svg>
+            <span class="ml-3 text-xl">windi-live-transform</span>
+        </a>
+        <nav class="md:ml-auto flex flex-wrap items-center text-base justify-center">
+            <button class="inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0">GitHub
+                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-1" viewBox="0 0 24 24">
+                    <path d="M5 12h14M12 5l7 7-7 7"></path>
+                </svg>
+            </button>
+        </nav>
+    </div>
+</header>
+<div class="container mx-auto">
+    <h1 class="font-thin text-center">Use windi (and therefore, Tailwind) without any bundler.</h1>
+    <div class="m-auto p-10 w-[50%] rounded shadow-xl text-white text-sans bg-$color1">
+        <code class="font-mono">
+            &lt;script src="unpkg.com/windi-live"&gt;&lt;/script&gt;
+        </code>
+    </div>
+</div>
+</body>
+</html>
