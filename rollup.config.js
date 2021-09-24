@@ -3,7 +3,7 @@ import {nodeResolve} from '@rollup/plugin-node-resolve';
 import { terser } from 'rollup-plugin-terser'
 
 export default {
-    input: 'index.js',
+    input: 'index.mjs',
     output: {
         file: 'index.dist.js',
         format: 'iife',
@@ -11,6 +11,6 @@ export default {
     },
     plugins: [
         nodeResolve(),
-        terser({ compress: { passes: 10 }, ecma: 2015, format: {ecma: 2015, comments: false, indent_level: 0} }),
+        terser({ compress: { passes: 10, global_defs: {AUTO_INVOKE: true} }, ecma: 2015, format: {ecma: 2015, comments: false, indent_level: 0} }),
     ]
 }

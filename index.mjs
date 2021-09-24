@@ -16,7 +16,7 @@ function styleGen(styleDict) {
     return final;
 }
 
-const styleToDOM = (prefix, stylesheet) => {
+const styleToDOM = (prefix, stylesheet, document) => {
     let styleNode = document.getElementById(`${prefix}-style-node`)
     if (!styleNode) {
         styleNode = document.createElement("style");
@@ -26,9 +26,12 @@ const styleToDOM = (prefix, stylesheet) => {
     styleNode.textContent = stylesheet.build(false);
 }
 
-function observe(node, prefix) {
+function observe(node, prefix, doc) {
     if(typeof prefix === 'undefined' || prefix == null) {
         prefix = 'windijit-';
+    }
+    if(typeof doc === 'undefined') {
+        doc = document;
     }
 
     const outputStyle = {};
@@ -62,18 +65,19 @@ function observe(node, prefix) {
         })
 
         const style = styleGen(outputStyle)
-        styleToDOM(prefix, style)
+        styleToDOM(prefix, style, doc)
     });
     obs.observe(node, {subtree: true, attributeFilter: ["class"], childList: true})
 
     const style = styleGen(outputStyle)
-    styleToDOM(prefix, style)
+    styleToDOM(prefix, style, doc)
 
     return () => {
         obs.disconnect()
     };
 }
-if(typeof IS_ESM === 'undefined') {
+
+if(typeof AUTO_INVOKE !== 'undefined') {
     document.addEventListener("DOMContentLoaded", () => observe(document.body))
 }
 
