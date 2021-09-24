@@ -1,7 +1,7 @@
 <h1 align="center">
 <img height="50" valign="middle" src="https://windicss.org/assets/logo.svg">-live-transform
 <br/>
-run Windi.css without bundling </h1>
+run Windi.css without any tools </h1>
 
 <p align="center">
 <a href="https://github.com/clean8s/windi-live-transform/actions/workflows/js_test.yaml"><img src="https://github.com/clean8s/windi-live-transform/actions/workflows/js_test.yaml/badge.svg" alt="Mocha test"></a>
