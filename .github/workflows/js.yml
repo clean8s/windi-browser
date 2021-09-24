@@ -2,6 +2,10 @@ name: "Rollup / JS build"
 
 on:
   workflow_dispatch: {}
+  push:
+    branches: ["main"]
+  pull_request:
+    branches: ["main"]
 jobs:
   rollup:
     runs-on: ubuntu-latest
