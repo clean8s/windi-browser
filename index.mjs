@@ -53,7 +53,6 @@ function observe(node, prefix, doc) {
     const obs = new MutationObserver((mutations, observer) => {
         var nodes = [];
         mutations.forEach(value => {
-            console.log(value)
             if (value.type === "attributes") {
                 nodes.push(value.target);
             } else {
