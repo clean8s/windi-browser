@@ -6,12 +6,17 @@
     <script src="https://unpkg.com/windi-live-transform"></script>
     <style>
         body {
+            opacity: 0;
+            transition: opacity 300ms;
+        }
+        body[data-loaded] {
             --mono: #272822;
             --tag: #DE265B;
             --str: #DDCB67;
             --attr: #95D62D;
             --id: #FB9F41;
             --plain: #ccc;
+            opacity: 1;
         }
     </style>
 </head>
@@ -124,6 +129,9 @@
                 `
                 }
                 render(html`<${App}/>`, example)
+            </script>
+            <script>
+                document.addEventListener('DOMContentLoaded', () => document.body.setAttribute('data-loaded', 'true'))
             </script>
     </section>
 </div>
