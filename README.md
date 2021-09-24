@@ -1,2 +1,2 @@
-## Run Windi / Tailwind without bundling
+## Run Windi.css without bundling
 
