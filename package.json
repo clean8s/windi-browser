@@ -1,9 +1,10 @@
 {
   "name": "windi-live-transform",
   "version": "0.0.1",
-  "repository": "https://github.com/web-mjs/windicss-browser.git",
+  "repository": "https://github.com/clean8s/windicss-browser.git",
   "author": "Filip Dimitrovski <filipdimitrovski22@gmail.com>",
   "license": "MIT",
+  "keywords": ["windi", "tailwind", "browser", "runtime", "transform"],
   "devDependencies": {
     "@rollup/plugin-node-resolve": "^13.0.5",
     "mocha": "^9.1.1",
