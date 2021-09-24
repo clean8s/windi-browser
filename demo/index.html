@@ -1,0 +1,212 @@
+
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8"/>
+    <title>windi-live-transform</title>
+    <meta name="viewport" content="width=device-width">
+    <script src="https://unpkg.com/windi-live-transform"></script>
+    <style>
+        body {
+            opacity: 0;
+            transition: opacity 300ms;
+        }
+        body[data-loaded] {
+            --mono: #272822;
+            --tag: #DE265B;
+            --str: #DDCB67;
+            --attr: #95D62D;
+            --id: #FB9F41;
+            --plain: #ccc;
+            opacity: 1;
+        }
+    </style>
+</head>
+<body class="font-sans m-0 p-0">
+<header class="text-gray-600">
+    <div class="container lg:!max-w-[1000px] flex flex-wrap flex-col md:flex-row items-center mx-auto">
+        <a class="flex title-font font-medium items-center text-gray-900 mb-4 p-t-5 justify-center">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round"
+                 stroke-linejoin="round" stroke-width="2" class="w-10 h-10 text-white p-2 bg-indigo-500 rounded-full"
+                 viewBox="0 0 20 24" width="16" height="16" >
+                <path d="M5.5 16a3.5 3.5 0 01-.369-6.98 4 4 0 117.753-1.977A4.5 4.5 0 1113.5 16h-8z"/>
+            </svg>
+            <span class="ml-3 text-xl">windi-live-transform</span>
+        </a>
+        <nav class="md:ml-auto flex flex-wrap items-center text-base justify-center">
+            <a href="https://github.com/clean8s/windi-live-transform"
+               class="inline-flex items-center bg-gray-100 border-0 px-3 no-underline focus:outline-none hover:bg-gray-200 rounded text-base">
+                <svg class="w-6 h-6 m-r-2" viewBox="0 0 24 24" width="16" height="16" >
+                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                </svg>
+                GitHub
+                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                     class="w-4 h-4 ml-1" viewBox="0 0 24 24" width="16" height="16">
+                    <path d="M5 12h14M12 5l7 7-7 7"></path>
+                </svg>
+            </a>
+        </nav>
+    </div>
+</header>
+<div class="container lg:!max-w-[1000px] mx-auto">
+    <h1 class="font-thin p-t-5 text-center">Use windi (and therefore, Tailwind) without any bundler.</h1>
+    <div class="grid">
+        <div class="m-auto p-10 inline-flex rounded shadow-xl text-white text-sans bg-$mono">
+            <code class="font-mono text-$attr text-lg font-bold">
+                <span class="text-$tag">&lt;script</span> type=<a class="text-$str">"module"&gt;</a>
+                <br/>
+                <a class="text-$tag">import</a> <a class="text-$id">observe</a> <a class="text-$tag">from</a> <a
+                    class="text-$str">"https://unpkg.com/windi-live-transform?module"</a>
+                <br/>
+                <a class="text-$plain">observe(</a><a class="text">myElement</a><a class="text-$plain">)</a><br/>
+                <span class="text-$tag">&lt;/script&gt;</span>
+            </code>
+        </div>
+    </div>
+
+    <section class="text-gray-600 body-font box-border">
+        <div class="container py-24 !p-b-0 m-0">
+            <div class="text-center">
+                <div class="p-4 lg:w-1/3 inline-block">
+                    <div class="border-2 rounded-lg border-gray-200 border-opacity-50 p-8">
+                        <div class="w-16 h-16 sm:mb-0 mb-4 inline-flex items-center justify-center rounded-full bg-indigo-100 text-indigo-500">
+                            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-linecap="round"
+                                 stroke-linejoin="round"
+                                 stroke-width="2" class="w-8 h-8" viewBox="0 0 24 24">
+                                <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
+                            </svg>
+                        </div>
+                        <div class="flex-grow">
+                            <h2 class="text-gray-900 text-lg title-font font-medium mb-3" >50KB gzip</h2>
+                            <p class="leading-relaxed text-base">A tinier alternative to Tailwind's CDN
+                                build</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-4 lg:w-1/3 inline-block">
+                    <div class="border-2 rounded-lg border-gray-200 border-opacity-50 p-8">
+                        <div class="w-16 h-16 sm:mb-0 mb-4 inline-flex items-center justify-center rounded-full bg-indigo-100 text-indigo-500 flex-shrink-0">
+                            <svg width="16" height="16"  fill="none" stroke="currentColor" stroke-linecap="round"
+                                 stroke-linejoin="round"
+                                 stroke-width="2" class="w-10 h-10" viewBox="0 0 24 24">
+                                <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"></path>
+                                <circle cx="12" cy="7" r="4"></circle>
+                            </svg>
+                        </div>
+                        <div class="flex-grow">
+                            <h2 class="text-gray-900 text-lg title-font font-medium mb-3">Useful for
+                                prototyping</h2>
+                            <p class="leading-relaxed text-base">Use plain old HTML editor with no CLI
+                                tools</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="text-center p-t-4 border-solid !border-t-1 border-0 border-gray-400">
+        A demo together with in-browser JSX/Preact:
+        <div class="p-5 grid grid-cols-2 gap-2">
+            <div id="example" class="flex-column flex-initial"></div>
+
+            <div class="text-left text-lg CodeMirror__container window-theme__none"><div class="CodeMirror CodeMirror-wrap cm-s-material"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 152px; left: 502.297px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" aria-label="Code editor" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 100%; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 29px; margin-bottom: 0px; border-right-width: 50px; min-height: 428px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-cursors" style=""><div class="CodeMirror-cursor" style="left: 461.297px; top: 100px; height: 20px;">&nbsp;</div></div><div class="CodeMirror-code" role="presentation" style="text-rendering: auto;"><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" aria-hidden="true" style="left: -29px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">1</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-keyword">import</span> { <span class="cm-def">html</span>, <span class="cm-def">useState</span>, <span class="cm-def">render</span> } <span class="cm-keyword">from</span> <span class="cm-string">'https://unpkg.com/@web-mjs/preact'</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" aria-hidden="true" style="left: -29px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">2</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-keyword">const</span> <span class="cm-def">App</span> <span class="cm-operator">=</span> () <span class="cm-operator">=&gt;</span> {</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" aria-hidden="true" style="left: -29px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">3</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-keyword">const</span> <span class="cm-def">styles</span> <span class="cm-operator">=</span> {</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" aria-hidden="true" style="left: -29px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">4</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-property">bg</span>: <span class="cm-string-2">`user-select-none bg-gradient-to-r from-[#e96443] to-[#904e95] w-50 mx-auto py-10`</span>,</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" aria-hidden="true" style="left: -29px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">5</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-property">btn</span>: <span class="cm-string-2">`border-2 !outline-none rounded-xl border-solid border-white text-white cursor-pointer bg-transparent p-3`</span>,</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" aria-hidden="true" style="left: -29px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">6</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-property">counter</span>: <span class="cm-string-2">`px-3 text-white italic transform translate-y-1 font-bold inline-block text-[30px]`</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" aria-hidden="true" style="left: -29px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">7</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp;  }</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" aria-hidden="true" style="left: -29px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">8</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">&ZeroWidthSpace;</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" aria-hidden="true" style="left: -29px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">9</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-keyword">const</span> [<span class="cm-def">cnt</span>, <span class="cm-def">setCnt</span>] <span class="cm-operator">=</span> <span class="cm-variable">useState</span>(<span class="cm-number">0</span>)</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" aria-hidden="true" style="left: -29px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">10</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-keyword">return</span> <span class="cm-variable">html</span><span class="cm-string-2">`</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" aria-hidden="true" style="left: -29px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">11</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-string-2">&lt;div class=${</span><span class="cm-variable-2">styles</span>.<span class="cm-property">bg</span><span class="cm-string-2">}&gt;</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" aria-hidden="true" style="left: -29px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">12</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-string-2">&lt;button onclick=${</span>() <span class="cm-operator">=&gt;</span> <span class="cm-variable-2">setCnt</span>(<span class="cm-variable-2">cnt</span> <span class="cm-operator">-</span> <span class="cm-number">1</span>)<span class="cm-string-2">}</span> <span class="cm-string-2">class=${</span><span class="cm-variable-2">styles</span>.<span class="cm-property">btn</span><span class="cm-string-2">}&gt;-1&lt;/button&gt;</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" aria-hidden="true" style="left: -29px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">13</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-string-2">&lt;span class=${</span><span class="cm-variable-2">styles</span>.<span class="cm-property">counter</span><span class="cm-string-2">}&gt;${</span><span class="cm-variable-2">cnt</span><span class="cm-string-2">}&lt;/span&gt;</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" aria-hidden="true" style="left: -29px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">14</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-string-2">&lt;button onclick=${</span>() <span class="cm-operator">=&gt;</span> <span class="cm-variable-2">setCnt</span>(<span class="cm-variable-2">cnt</span> <span class="cm-operator">+</span> <span class="cm-number">1</span>)<span class="cm-string-2">}</span> <span class="cm-string-2">class=${</span><span class="cm-variable-2">styles</span>.<span class="cm-property">btn</span><span class="cm-string-2">}&gt;+1&lt;/button&gt;</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" aria-hidden="true" style="left: -29px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">15</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-string-2">&lt;/div&gt;</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" aria-hidden="true" style="left: -29px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">16</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-string-2">`</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" aria-hidden="true" style="left: -29px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">17</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">}</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" aria-hidden="true" style="left: -29px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">18</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable">render</span>(<span class="cm-variable">html</span><span class="cm-string-2">`&lt;${</span><span class="cm-variable">App</span><span class="cm-string-2">}/&gt;`</span>, <span class="cm-variable">example</span>)</span></pre></div></div></div></div></div></div><div style="position: absolute; height: 50px; width: 1px; border-bottom: 0px solid transparent; top: 428px;"></div><div class="CodeMirror-gutters" style="height: 478px; left: 0px;"><div class="CodeMirror-gutter CodeMirror-linenumbers" style="width: 29px;"></div></div></div></div>
+            </div>
+            <script type="module" async defer>
+                import { html, useState, render } from 'https://unpkg.com/@web-mjs/preact'
+                const App = () => {
+                    const styles = {
+                        bg: `w-[100%] user-select-none bg-gradient-to-r from-[#e96443] to-[#904e95] mx-auto py-10`,
+                        btn: `border-2 !outline-none rounded-xl border-solid border-white text-white cursor-pointer bg-transparent p-3`,
+                        counter: `px-3 text-white italic transform translate-y-1 font-bold inline-block text-[30px]`
+                    }
+
+                    const [cnt, setCnt] = useState(0)
+                    return html`
+                <div class=${styles.bg}>
+                <button onclick=${() => setCnt(cnt - 1)} class=${styles.btn}>-1</button>
+                <span class=${styles.counter}>${cnt}</span>
+                <button onclick=${() => setCnt(cnt + 1)} class=${styles.btn}>+1</button>
+                </div>
+                `
+                }
+                render(html`<${App}/>`, example)
+            </script>
+            <script>
+                document.addEventListener('DOMContentLoaded', () => document.body.setAttribute('data-loaded', 'true'))
+            </script>
+    </section>
+</div>
+
+<!--Codemirror-->
+<style>.CodeMirror{font-family:monospace;height:300px;color:#000;direction:ltr;}
+.CodeMirror-lines{padding:4px 0;}
+.CodeMirror pre.CodeMirror-line{padding:0 4px;}
+.CodeMirror-gutter-filler,.CodeMirror-scrollbar-filler{background-color:#fff;}
+.CodeMirror-gutters{border-right:1px solid #ddd;background-color:#f7f7f7;white-space:nowrap;}
+.CodeMirror-linenumber{padding:0 3px 0 5px;min-width:20px;text-align:right;color:#999;white-space:nowrap;}
+.CodeMirror-cursor{border-left:1px solid #000;border-right:none;width:0;}
+.CodeMirror{position:relative;overflow:hidden;background:#fff;}
+.CodeMirror-scroll{overflow:scroll!important;margin-bottom:-50px;margin-right:-50px;padding-bottom:50px;height:100%;outline:0;position:relative;}
+.CodeMirror-sizer{position:relative;border-right:50px solid transparent;}
+.CodeMirror-gutter-filler,.CodeMirror-scrollbar-filler{position:absolute;z-index:6;display:none;outline:0;}
+.CodeMirror-scrollbar-filler{right:0;bottom:0;}
+.CodeMirror-gutter-filler{left:0;bottom:0;}
+.CodeMirror-gutters{position:absolute;left:0;top:0;min-height:100%;z-index:3;}
+.CodeMirror-gutter{white-space:normal;height:100%;display:inline-block;vertical-align:top;margin-bottom:-50px;}
+.CodeMirror-gutter-wrapper{position:absolute;z-index:4;background:0 0!important;border:none!important;}
+.CodeMirror-gutter-elt{position:absolute;cursor:default;z-index:4;}
+.CodeMirror-gutter-wrapper ::selection{background-color:transparent;}
+.CodeMirror-gutter-wrapper ::-moz-selection{background-color:transparent;}
+.CodeMirror-lines{cursor:text;min-height:1px;}
+.CodeMirror pre.CodeMirror-line{-moz-border-radius:0;-webkit-border-radius:0;border-radius:0;border-width:0;background:0 0;font-family:inherit;font-size:inherit;margin:0;white-space:pre;word-wrap:normal;line-height:inherit;color:inherit;z-index:2;position:relative;overflow:visible;-webkit-tap-highlight-color:transparent;-webkit-font-variant-ligatures:contextual;font-variant-ligatures:contextual;}
+.CodeMirror-wrap pre.CodeMirror-line{word-wrap:break-word;white-space:pre-wrap;word-break:normal;}
+.CodeMirror-code{outline:0;}
+.CodeMirror-gutter,.CodeMirror-gutters,.CodeMirror-linenumber,.CodeMirror-scroll,.CodeMirror-sizer{-moz-box-sizing:content-box;box-sizing:content-box;}
+.CodeMirror-measure{position:absolute;width:100%;height:0;overflow:hidden;visibility:hidden;}
+.CodeMirror-cursor{position:absolute;pointer-events:none;}
+div.CodeMirror-cursors{visibility:hidden;position:relative;z-index:3;}
+.CodeMirror-line::selection,.CodeMirror-line>span::selection,.CodeMirror-line>span>span::selection{background:#d7d4f0;}
+.CodeMirror-line::-moz-selection,.CodeMirror-line>span::-moz-selection,.CodeMirror-line>span>span::-moz-selection{background:#d7d4f0;}
+@media print{
+    .CodeMirror div.CodeMirror-cursors{visibility:hidden;}
+}
+.cm-s-material.CodeMirror{background-color:#263238;color:#eff;}
+.cm-s-material .CodeMirror-gutters{background:#263238;color:#546e7a;border:none;}
+.cm-s-material .CodeMirror-linenumber{color:#546e7a;}
+.cm-s-material .CodeMirror-cursor{border-left:1px solid #fc0;}
+.cm-s-material .CodeMirror-line::selection,.cm-s-material .CodeMirror-line>span::selection,.cm-s-material .CodeMirror-line>span>span::selection{background:rgba(128,203,196,.2);}
+.cm-s-material .CodeMirror-line::-moz-selection,.cm-s-material .CodeMirror-line>span::-moz-selection,.cm-s-material .CodeMirror-line>span>span::-moz-selection{background:rgba(128,203,196,.2);}
+.cm-s-material .cm-keyword{color:#c792ea;}
+.cm-s-material .cm-operator{color:#89ddff;}
+.cm-s-material .cm-variable-2{color:#eff;}
+.cm-s-material .cm-number{color:#ff5370;}
+.cm-s-material .cm-def{color:#82aaff;}
+.cm-s-material .cm-string{color:#c3e88d;}
+.cm-s-material .cm-string-2{color:#f07178;}
+.cm-s-material .cm-variable{color:#f07178;}
+.cm-s-material .cm-property{color:#c792ea;}
+/*! CSS Used from: Embedded */
+div,span,pre{margin:0;padding:0;border:0;font-size:100%;font-weight:inherit;font-family:inherit;font-style:inherit;vertical-align:baseline;}
+*{box-sizing:border-box;}
+*::selection{background:rgba(255,255,255,0.99);color:#121212;}
+/*! CSS Used from: Embedded */
+.CodeMirror__container .CodeMirror{color:rgb(233, 237, 237)!important;background-color:rgb(38, 50, 56)!important;}
+.cm-string,.cm-string-2{color:rgb(195, 232, 141)!important;}
+.cm-variable{color:rgb(130, 177, 255)!important;}
+.cm-variable-2{color:rgb(128, 203, 196)!important;}
+.cm-number{color:rgb(247, 118, 105)!important;}
+.cm-keyword{color:rgb(199, 146, 234)!important;}
+.cm-property{color:rgb(128, 203, 174)!important;}
+.cm-def{color:rgb(233, 237, 237)!important;}
+.cm-operator{color:rgb(233, 237, 237)!important;}
+.container.jsx-898927117 .CodeMirror-gutters{background-color:unset;border-right:none;}
+.container.jsx-898927117 .CodeMirror__container{min-width:inherit;position:relative;z-index:1;border-radius:5px;box-shadow:rgba(0, 0, 0, 0.55) 0px 20px 68px;}
+.container.jsx-898927117 .CodeMirror__container .CodeMirror{height:auto;min-width:inherit;padding:18px 18px 18px 12px;border-radius:5px;font-size:15.5px;line-height:133%;font-variant-ligatures:contextual;font-feature-settings:"calt";user-select:none;font-family:Hack, monospace!important;}
+.container.jsx-898927117 .CodeMirror-scroll{overflow:hidden!important;}
+.container.jsx-898927117 .window-controls + .CodeMirror__container > .CodeMirror{padding-top:48px;}
+.container.jsx-898927117 .CodeMirror-linenumber{cursor:pointer;}
+/*! CSS Used fontfaces */
+@font-face{font-family:'Hack';font-display:swap;src:url(//cdn.jsdelivr.net/font-hack/2.020/fonts/woff2/hack-regular-webfont.woff2?v=2.020) format('woff2'), url(//cdn.jsdelivr.net/font-hack/2.020/fonts/woff/hack-regular-webfont.woff?v=2.020) format('woff');}</style></div>
+
+</body>
+</html>
